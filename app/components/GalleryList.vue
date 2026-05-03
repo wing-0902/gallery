@@ -4,15 +4,15 @@ import photoList from '~/assets/list.json';
 
 <template>
   <div class="grid-layout">
-    <NuxtPicture
-      v-for="photo in photoList"
-      :key="photo"
-      :src="`/gallery/${photo}`"
-      width="512"
-      height="512"
-      fit="cover"
-      alt="Gallery Image"
-    />
+    <NuxtLink v-for="photo in photoList" :key="photo" :to="`/photo/${photo}`">
+      <NuxtPicture
+        :src="`/gallery/${photo}`"
+        width="512"
+        height="512"
+        fit="cover"
+        alt="Gallery Image"
+      />
+    </NuxtLink>
   </div>
 </template>
 
