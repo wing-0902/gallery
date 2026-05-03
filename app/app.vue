@@ -1,6 +1,12 @@
 <script setup lang="ts">
 useHead({
-  title: 'Photo by Wing'
+  title: 'Photo by Wing',
+  meta: [
+    {
+      name: 'theme-color',
+      content: '#162030'
+    }
+  ]
 });
 </script>
 

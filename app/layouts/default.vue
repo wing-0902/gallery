@@ -1,9 +1,5 @@
 <template>
-  <div class='root'>
+  <div>
     <slot />
   </div>
 </template>
-
-<style lang='sass' scoped>
-
-</style>
