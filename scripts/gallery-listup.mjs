@@ -13,13 +13,15 @@ try {
 
   // 画像ファイルだけに絞り込み，ファイル名でソート
   const photoList = files
-    .filter(file => EXTENSIONS.test(file))
-    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+    .filter((file) => EXTENSIONS.test(file))
+    .sort((a, b) =>
+      a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+    );
 
   // JSONに書き出し
   fs.writeFileSync(OUTPUT_JSON, JSON.stringify(photoList, null, 2));
 
-  console.log("書き出し成功！");
+  console.log('書き出し成功！');
 } catch (err) {
   console.error('エラーが発生：', err.message);
 }

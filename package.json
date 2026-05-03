@@ -7,8 +7,11 @@
     "dev": "nuxt dev",
     "format": "prettier --write .",
     "generate": "nuxt generate",
+    "prebuild": "pnpm u",
+    "predev": "pnpm u",
+    "pregenerate": "pnpm u",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "postinstall": "nuxt prepare && pnpm u",
     "u": "node scripts/gallery-listup.mjs"
   },
   "dependencies": {
