@@ -1,18 +1,16 @@
 <template>
   <Fixed>
-  <div class="page-container">
-    <NuxtLink to="/" class="backdrop-link" aria-label="Close" />
+    <div class="page-container">
+      <NuxtLink to="/" class="backdrop-link" aria-label="Close" />
 
-    <div class="image-wrapper">
-      <NuxtPicture
-        :src="`/gallery/${$route.params.slug}`"
-      />
+      <div class="image-wrapper">
+        <NuxtPicture :src="`/gallery/${$route.params.slug}`" />
+      </div>
     </div>
-  </div>
   </Fixed>
 </template>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .page-container {
   position: relative;
   width: 100%;

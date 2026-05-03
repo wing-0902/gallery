@@ -2,6 +2,17 @@
   <header w-full flex justify-between items-end m-0>
     <h1 m-0>Photo by Wing</h1>
     <div flex m-x-0 m-y-2 gap-x-2>
+      <a
+        i-hugeicons-source-code
+        href="https://github.com/wing-0902/gallery"
+        target="_blank"
+      ></a>
+      <a
+        i-hugeicons-github-01
+        href="https://github.com/wing-0902"
+        target="_blank"
+        >GitHub</a
+      >
       <a i-hugeicons-home-02 href="https://wing.osaka" target="_blank"
         >Homepage</a
       >
@@ -9,7 +20,13 @@
         i-hugeicons-bluesky
         href="https://bsky.app/profile/wing.osaka"
         target="_blank"
-        >Bluesky</a
+        >Bluesky Social</a
+      >
+      <a
+        i-hugeicons-mastodon
+        href="https://mastodon.social/@wing_osaka"
+        target="_blank"
+        >Mastodon Social</a
       >
     </div>
   </header>
