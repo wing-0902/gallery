@@ -1,6 +1,11 @@
+<script setup lang="ts">
+useHead({
+  title: 'Photo by Wing'
+});
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
