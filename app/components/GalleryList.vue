@@ -8,8 +8,8 @@ import photoList from '~/assets/list.json';
       v-for="photo in photoList"
       :key="photo"
       :src="`/gallery/${photo}`"
-      width="400"
-      height="300"
+      width="500"
+      height="500"
       fit="cover"
       alt="Gallery Image"
     />
