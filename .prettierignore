@@ -8,3 +8,6 @@ bun.lockb
 # Miscellaneous
 /public/
 /static/
+
+# autogenerate
+/app/assets/list.json
