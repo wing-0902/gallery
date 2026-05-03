@@ -2,6 +2,24 @@
   "name": "gallery",
   "type": "module",
   "private": true,
+  "version": "26.0.0",
+  "license": "BSD-3-Clause",
+
+  "description": "Photo Gallery by Wing",
+  "author": {
+    "name": "Wing",
+    "email": "wing@me.wing.osaka",
+    "url": "https://wing.osaka"
+  },
+  "homepage": "https://gallery.wing.osaka",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wing-0902/gallery"
+  },
+  "bugs": {
+    "url": "https://github.com/wing-0902/gallery/issues"
+  },
+
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
