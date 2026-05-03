@@ -4,7 +4,7 @@ useHead({
   meta: [
     {
       name: 'theme-color',
-      content: '#162030'
+      content: '#000000'
     }
   ]
 });
