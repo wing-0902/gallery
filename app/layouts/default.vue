@@ -15,6 +15,7 @@
   </header>
 
   <!-- 写真いちらん -->
+  <GalleryList />
 
   <slot />
 
