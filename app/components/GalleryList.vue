@@ -19,7 +19,7 @@ import photoList from '~/assets/list.json';
 <style scoped lang="scss">
 .grid-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 16px;
 }
 </style>
