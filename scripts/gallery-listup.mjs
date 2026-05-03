@@ -14,7 +14,7 @@ try {
   // 画像ファイルだけに絞り込み，ファイル名でソート
   const photoList = files
     .filter((file) => EXTENSIONS.test(file))
-    .sort((a, b) =>
+    .sort((b, a) =>
       a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
     );
 
