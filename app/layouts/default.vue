@@ -11,7 +11,10 @@
       >
     </div>
   </header>
-  <div>
+
+  <!-- 写真いちらん -->
+
+  <div fixed inset-0>
     <slot />
   </div>
 </template>

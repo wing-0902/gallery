@@ -7,5 +7,12 @@ export default defineNuxtConfig({
     '@unocss/reset/sanitize/assets.css'
   ],
   devtools: { enabled: true },
+  image: {
+    format: ['avif'],
+    screens: {
+      mobile: 512,
+      desktop: 1024
+    }
+  },
   modules: ['@nuxt/image', '@unocss/nuxt']
 });
