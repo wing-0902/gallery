@@ -75,7 +75,12 @@ const handleShare = async (url: string) => {
       <NuxtLink to="/" class="backdrop-link" aria-label="Close" />
 
       <div class="image-wrapper">
-        <NuxtPicture :src="`/gallery/${$route.params.slug}`" />
+        <NuxtPicture
+          :src="`/gallery/${$route.params.slug}`"
+          width="1024"
+          height="1024"
+          alt="Gallery Image"
+        />
       </div>
     </div>
   </Fixed>
@@ -97,13 +102,13 @@ const handleShare = async (url: string) => {
     left: 20px;
     z-index: 3;
     button {
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
       border-radius: 50%;
       border: 1px solid white;
       background-color: rgba(255, 255, 255, 0.6);
       color: black;
-      font-size: 17px;
+      font-size: 14px;
       z-index: 4;
       pointer-events: auto;
       margin: 0 4px;
