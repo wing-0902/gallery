@@ -7,6 +7,11 @@ export default defineNuxtConfig({
     '@unocss/reset/sanitize/assets.css'
   ],
   devtools: { enabled: true },
+  fonts: {
+    families: [
+      { name: 'Kiwi Maru', weights: [400, 500], global: true },
+    ]
+  },
   image: {
     format: ['avif'],
     screens: {
@@ -14,7 +19,12 @@ export default defineNuxtConfig({
       desktop: 1024
     }
   },
-  modules: ['@nuxt/image', '@unocss/nuxt', 'nuxt-og-image'],
+  modules: [
+    '@nuxt/image',
+    '@unocss/nuxt',
+    'nuxt-og-image',
+    '@nuxt/fonts'
+  ],
   ogImage: {
     enabled: true
   },
