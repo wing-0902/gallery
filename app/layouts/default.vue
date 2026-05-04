@@ -1,6 +1,6 @@
 <template>
   <header class="root" w-full flex justify-between items-end m-0>
-    <h1 m-0>Photo by Wing</h1>
+    <h1 m-0>Photos</h1>
     <div flex m-x-0 m-y-2 gap-x-2>
       <a
         i-hugeicons-source-code
