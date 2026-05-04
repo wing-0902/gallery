@@ -4,7 +4,6 @@
   "private": true,
   "version": "26.0.0",
   "license": "BSD-3-Clause",
-
   "description": "Photo Gallery by Wing",
   "author": {
     "name": "Wing",
@@ -19,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/wing-0902/gallery/issues"
   },
-
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
