@@ -31,8 +31,12 @@
     "u": "node scripts/gallery-listup.mjs"
   },
   "dependencies": {
+    "@takumi-rs/core": "^1.1.2",
+    "@unhead/vue": "^2.1.13",
     "@unocss/reset": "^66.6.8",
     "nuxt": "^4.4.4",
+    "nuxt-og-image": "6.4.10",
+    "unstorage": "^1.17.5",
     "vue": "^3.5.33",
     "vue-router": "^5.0.6"
   },

@@ -14,5 +14,12 @@ export default defineNuxtConfig({
       desktop: 1024
     }
   },
-  modules: ['@nuxt/image', '@unocss/nuxt']
+  modules: ['@nuxt/image', '@unocss/nuxt', 'nuxt-og-image'],
+  ogImage: {
+    enabled: true
+  },
+  site: {
+    url: 'https://gallery.wing.osaka',
+    name: 'Gallery by Wing'
+  }
 });

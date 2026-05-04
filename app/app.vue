@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Photo by Wing',
+  title: 'Gallery by Wing',
   meta: [
     {
       name: 'theme-color',
@@ -8,6 +8,11 @@ useHead({
     }
   ]
 });
+
+useSeoMeta({
+  ogTitle: 'Gallery by Wing',
+  ogDescription: 'Wingのフォトギャラリー．'
+})
 </script>
 
 <template>
