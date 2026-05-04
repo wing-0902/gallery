@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const handleNavigate = async () => {
-  await navigateTo("/");
+  await navigateTo('/');
 };
 
 const handleDownload = async (url: string, filename: string) => {
@@ -24,7 +24,7 @@ const handleDownload = async (url: string, filename: string) => {
 
 const handleShare = async (url: string) => {
   const shareData = {
-    title: "Gallery by Wing",
+    title: 'Gallery by Wing',
     description: "Wing's Photo Gallery",
     url: url
   };
@@ -35,7 +35,9 @@ const handleShare = async (url: string) => {
       alert('URLをクリップボードにコピーしました．');
     } catch (err) {
       console.error('コピー失敗：', err);
-      alert('申し訳ありませんが，この機能は現在の環境ではご利用いただけません．');
+      alert(
+        '申し訳ありませんが，この機能は現在の環境ではご利用いただけません．'
+      );
     }
   } else {
     try {

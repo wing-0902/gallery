@@ -12,7 +12,7 @@ useHead({
 useSeoMeta({
   ogTitle: 'Gallery by Wing',
   ogDescription: 'Wingのフォトギャラリー．'
-})
+});
 </script>
 
 <template>

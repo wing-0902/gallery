@@ -8,9 +8,7 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   fonts: {
-    families: [
-      { name: 'Kiwi Maru', weights: [400, 500], global: true },
-    ]
+    families: [{ name: 'Kiwi Maru', weights: [400, 500], global: true }]
   },
   image: {
     format: ['avif'],
@@ -19,12 +17,7 @@ export default defineNuxtConfig({
       desktop: 1024
     }
   },
-  modules: [
-    '@nuxt/image',
-    '@unocss/nuxt',
-    'nuxt-og-image',
-    '@nuxt/fonts'
-  ],
+  modules: ['@nuxt/image', '@unocss/nuxt', 'nuxt-og-image', '@nuxt/fonts'],
   ogImage: {
     enabled: true
   },
