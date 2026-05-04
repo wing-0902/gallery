@@ -9,7 +9,7 @@ import photoList from '~/assets/list.json';
         :src="`/gallery/${photo}`"
         width="512"
         height="512"
-        format='avif,webp'
+        format="avif,webp"
         fit="cover"
         alt="Gallery Image"
       />
@@ -20,7 +20,7 @@ import photoList from '~/assets/list.json';
 <style scoped lang="scss">
 .grid-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
   gap: 16px;
 }
 </style>
