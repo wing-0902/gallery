@@ -75,8 +75,7 @@ const handleShare = async (url: string) => {
       <NuxtLink to="/" class="backdrop-link" aria-label="Close" />
 
       <div class="image-wrapper">
-        <NuxtImg
-          format="avif,webp"
+        <img
           :src="`/gallery/${$route.params.slug}`"
           width="1024"
           height="1024"

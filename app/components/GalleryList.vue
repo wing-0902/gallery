@@ -9,6 +9,7 @@ import photoList from '~/assets/list.json';
         :src="`/gallery/${photo}`"
         width="512"
         height="512"
+        format='avif,webp'
         fit="cover"
         alt="Gallery Image"
       />
