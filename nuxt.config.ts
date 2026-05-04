@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     families: [{ name: 'Kiwi Maru', weights: [400, 500], global: true }]
   },
   image: {
-    format: ['avif'],
+    format: ['avif', 'webp'],
     screens: {
       mobile: 512,
       desktop: 1024
