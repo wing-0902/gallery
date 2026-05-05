@@ -20,7 +20,10 @@ import photoList from '~/assets/list.json';
 <style scoped lang="scss">
 .grid-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(calc(50% - 16px), 250px), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(calc(50% - 16px), 250px), 1fr)
+  );
   gap: 16px;
 }
 </style>

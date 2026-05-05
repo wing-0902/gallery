@@ -17,7 +17,13 @@ export default defineNuxtConfig({
       desktop: 1024
     }
   },
-  modules: ['@nuxt/image', '@unocss/nuxt', 'nuxt-og-image', '@nuxt/fonts'],
+  modules: [
+    '@nuxt/image',
+    '@unocss/nuxt',
+    'nuxt-og-image',
+    '@nuxt/fonts',
+    '@vueuse/nuxt'
+  ],
   ogImage: {
     enabled: true
   },
