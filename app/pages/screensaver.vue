@@ -16,17 +16,19 @@ useIntervalFn(() => {
   } else {
     count.value = 0;
   }
-}, 1500);
+}, 15000);
 
 const fileName = computed(() => photoList[count.value]);
 
 const currentTime = ref(new Date());
 useIntervalFn(() => {
   currentTime.value = new Date();
-}, 500)
+}, 1000)
 
 const formatDate = (date: Date) => date.toLocaleDateString();
-const formatTime = (date: Date) => date.toLocaleTimeString();
+const formatTime = (date: Date) => date.toLocaleTimeString(undefined, {
+  timeStyle: 'short'
+});
 </script>
 
 <template>
@@ -68,6 +70,7 @@ const formatTime = (date: Date) => date.toLocaleTimeString();
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Kiwi Maru', sans-serif;
 
   div {
     margin: 50px;
