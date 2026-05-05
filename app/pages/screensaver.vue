@@ -23,26 +23,27 @@ const fileName = computed(() => photoList[count.value]);
 const currentTime = ref(new Date());
 useIntervalFn(() => {
   currentTime.value = new Date();
-}, 1000)
+}, 1000);
 
 const formatDate = (date: Date) => date.toLocaleDateString();
-const formatTime = (date: Date) => date.toLocaleTimeString(undefined, {
-  timeStyle: 'short'
-});
+const formatTime = (date: Date) =>
+  date.toLocaleTimeString(undefined, {
+    timeStyle: 'short'
+  });
 </script>
 
 <template>
   <img class="imgSlot" :src="`/gallery/${fileName}`" />
-  <div class='txtSlot'>
+  <div class="txtSlot">
     <div>
       <h2>{{ formatDate(currentTime) }}</h2>
       <h1>{{ formatTime(currentTime) }}</h1>
     </div>
     <div>
       <p>{{ count + 1 }} / {{ len }}</p>
-      <NuxtLink to='/' class='vh'>
-        <span class='vg'>Visit Gallery</span>
-        <div class='homebar'></div>
+      <NuxtLink to="/" class="vh">
+        <span class="vg">Visit Gallery</span>
+        <div class="homebar"></div>
       </NuxtLink>
     </div>
   </div>
@@ -97,5 +98,15 @@ const formatTime = (date: Date) => date.toLocaleTimeString(undefined, {
       }
     }
   }
+}
+
+h1,
+h2,
+p,
+.vg {
+  color: white;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 0, 0, 0.2);
 }
 </style>
