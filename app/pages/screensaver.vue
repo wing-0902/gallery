@@ -1,4 +1,6 @@
 <script setup lang="ts">
+defineOgImage('ScreenSaver', { title: 'Screensaver - Gallery by Wing' });
+
 import { useIntervalFn } from '@vueuse/core';
 
 definePageMeta({

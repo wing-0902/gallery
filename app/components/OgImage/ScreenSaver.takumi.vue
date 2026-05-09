@@ -11,7 +11,7 @@ defineProps<{
     class="w-full h-full flex flex-col justify-center items-center p-[60px] relative"
     :style="{
       backgroundColor: '#fff',
-      backgroundImage: 'url(/bg.jpg)',
+      backgroundImage: 'url(/gallery/2024-03-10T14_22_15.JPG)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       fontFamily: 'Kiwi Maru'
@@ -20,17 +20,16 @@ defineProps<{
     <div class="flex flex-col items-center justify-center">
       <h1
         class="text-[72px] m-0 leading-tight text-center font-medium"
-        style="text-wrap: balance; color: white;"
+        style="text-wrap: balance; color: burlywood;"
       >
-        {{ title || 'My Page' }}
+        Screensaver
       </h1>
       
       <p
-        v-if="description"
         class="text-[32px]  mt-4 text-center max-w-[900px]"
-        style="color: white;"
+        style="color: burlywood;"
       >
-        {{ description }}
+        from Gallery by Wing
       </p>
     </div>
   </div>
