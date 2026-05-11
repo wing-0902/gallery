@@ -130,5 +130,10 @@ const handleShare = async (url: string) => {
   position: relative;
   z-index: 2;
   pointer-events: none; /* 画像越しにクリック可能 */
+  img {
+    width: 100vw;
+    height: 100dvh;
+    object-fit: contain;
+  }
 }
 </style>
