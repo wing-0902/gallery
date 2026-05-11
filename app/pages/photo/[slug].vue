@@ -132,6 +132,9 @@ const handleShare = async (url: string) => {
     width: 100vw;
     height: 100dvh;
     object-fit: contain;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 }
 </style>
