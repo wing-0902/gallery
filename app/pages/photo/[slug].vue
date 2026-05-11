@@ -77,8 +77,6 @@ const handleShare = async (url: string) => {
       <div class="image-wrapper">
         <img
           :src="`/gallery/${$route.params.slug}`"
-          width="1024"
-          height="1024"
           alt="Gallery Image"
         />
       </div>
