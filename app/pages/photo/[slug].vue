@@ -1,4 +1,12 @@
 <script setup lang="ts">
+const route = useRoute()
+  
+useSeoMeta({
+  ogTitle: 'Gallery Photo by Wing',
+  ogImage: () => `https://gallery.wing.osaka/gallery/${route.params.slug}`,
+  ogType: 'article'
+})
+  
 const handleNavigate = async () => {
   await navigateTo('/');
 };
@@ -51,6 +59,7 @@ const handleShare = async (url: string) => {
 </script>
 
 <template>
+  
   <Fixed>
     <div class="page-container">
       <div class="menuSlot">
