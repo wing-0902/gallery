@@ -1,4 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import photoList from './assets/list.json'
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -31,6 +34,11 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@vueuse/nuxt'
   ],
+  nitro: {
+    prerender: {
+      routes: photoList.map(photo => `/photo/${photo}`)
+    }
+  },
   ogImage: {
     enabled: true
   },
