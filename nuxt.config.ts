@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import photoList from './assets/list.json'
+import photoList from './app/assets/list.json'
 
 export default defineNuxtConfig({
   app: {
