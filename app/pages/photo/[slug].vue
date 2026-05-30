@@ -36,27 +36,28 @@ const handleKeyDown = (event: KeyboardEvent) => {
 
 // スワイプ操作
 let touchStartX = 0;
-let touchEndX = 0;
 
-const SWIPE_THRESHOLD = 50; // px
-
-const handleTouchStart = (event: TouchEvent) => {
-  if (!event || !event.touches || event.touches.length === 0) return;
-  touchStartX = event.touches[0]!.clientX;
+const handleTouchStart = (e: TouchEvent) => {
+  if (e.touches.length === 0) return;
+  touchStartX = e.touches[0].clientX;
 };
 
-const handleTouchEnd = (event: TouchEvent) => {
-  if (!event || !event.changedTouches || event.touches.length === 0) return;
-  touchEndX = event.changedTouches[0]!.clientX;
-  handleSwipeGesture();
-};
+const handleTouchEnd = (e: TouchEvent) => {
+  if (e.changedTouches.length === 0) return;
 
-const handleSwipeGesture = () => {
+  const touchEndX = e.changedTouches[0].clientX;
   const diffX = touchEndX - touchStartX;
 
-  if (diffX < -SWIPE_THRESHOLD && nextSlug.value) {
+  console.log({
+    diffX,
+    current: currentSlug.value,
+    prev: prevSlug.value,
+    next: nextSlug.value
+  });
+
+  if (diffX < -50 && nextSlug.value) {
     navigateTo(`/photo/${nextSlug.value}`);
-  } else if (diffX > SWIPE_THRESHOLD && prevSlug.value) {
+  } else if (diffX > 50 && prevSlug.value) {
     navigateTo(`/photo/${prevSlug.value}`);
   }
 };
