@@ -24,4 +24,4 @@ logs
 !.env.example
 
 # Auto-generated files
-# app/assets/list.json
+app/assets/list.json
