@@ -29,18 +29,48 @@ const nextSlug = computed(() => {
 const handleKeyDown = (event: KeyboardEvent) => {
   if (event.key === 'ArrowLeft' && prevSlug.value) {
     navigateTo(`/photo/${prevSlug.value}`);
-  }
-  else if (event.key === 'ArrowRight' && nextSlug.value) {
+  } else if (event.key === 'ArrowRight' && nextSlug.value) {
     navigateTo(`/photo/${nextSlug.value}`);
+  }
+};
+
+// スワイプ操作
+let touchStartX = 0;
+let touchEndX = 0;
+
+const SWIPE_THRESHOLD = 50; // px
+
+const handleTouchStart = (event: TouchEvent) => {
+  if (!event || !event.touches || event.touches.length === 0) return;
+  touchStartX = event.touches[0]!.clientX;
+};
+
+const handleTouchEnd = (event: TouchEvent) => {
+  if (!event || !event.changedTouches || event.touches.length === 0) return;
+  touchEndX = event.changedTouches[0]!.clientX;
+  handleSwipeGesture();
+};
+
+const handleSwipeGesture = () => {
+  const diffX = touchEndX - touchStartX;
+
+  if (diffX < -SWIPE_THRESHOLD && nextSlug.value) {
+    navigateTo(`/photo/${nextSlug.value}`);
+  } else if (diffX > SWIPE_THRESHOLD && prevSlug.value) {
+    navigateTo(`/photo/${prevSlug.value}`);
   }
 };
 
 // 監視状態の管理
 onMounted(() => {
   window.addEventListener('keydown', handleKeyDown);
+  window.addEventListener('touchstart', handleTouchStart);
+  window.addEventListener('touchend', handleTouchEnd);
 });
 onUnmounted(() => {
   window.removeEventListener('keydown', handleKeyDown);
+  window.removeEventListener('touchstart', handleTouchStart);
+  window.removeEventListener('touchend', handleTouchEnd);
 });
 
 const handleNavigate = async () => {
