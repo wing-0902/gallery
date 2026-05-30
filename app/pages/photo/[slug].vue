@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const route = useRoute()
-  
+const route = useRoute();
+
 useSeoMeta({
   ogTitle: 'Gallery Photo by Wing',
   ogImage: () => `https://gallery.wing.osaka/gallery/${route.params.slug}`,
   ogType: 'article'
-})
-  
+});
+
 const handleNavigate = async () => {
   await navigateTo('/');
 };
@@ -59,7 +59,6 @@ const handleShare = async (url: string) => {
 </script>
 
 <template>
-  
   <Fixed>
     <div class="page-container">
       <div class="menuSlot">
@@ -84,10 +83,7 @@ const handleShare = async (url: string) => {
       <NuxtLink to="/" class="backdrop-link" aria-label="Close" />
 
       <div class="image-wrapper">
-        <img
-          :src="`/gallery/${$route.params.slug}`"
-          alt="Gallery Image"
-        />
+        <img :src="`/gallery/${$route.params.slug}`" alt="Gallery Image" />
       </div>
     </div>
   </Fixed>

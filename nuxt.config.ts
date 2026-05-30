@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import photoList from './app/assets/list.json'
+import photoList from './app/assets/list.json';
 
 export default defineNuxtConfig({
   app: {
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   ],
   nitro: {
     prerender: {
-      routes: photoList.map(photo => `/photo/${photo}`)
+      routes: photoList.map((photo) => `/photo/${photo}`)
     }
   },
   ogImage: {
