@@ -1,10 +1,46 @@
 <script setup lang="ts">
+import galleryList from '~/assets/list.json';
+
 const route = useRoute();
+
+const currentSlug = computed(() => route.params.slug as string);
 
 useSeoMeta({
   ogTitle: 'Gallery Photo by Wing',
   ogImage: () => `https://gallery.wing.osaka/gallery/${route.params.slug}`,
   ogType: 'article'
+});
+
+// 前のパス
+const prevSlug = computed(() => {
+  const currentIndex = galleryList.indexOf(currentSlug.value);
+  return currentIndex > 0 ? galleryList[currentIndex - 1] : null;
+});
+
+// 後のパス
+const nextSlug = computed(() => {
+  const currentIndex = galleryList.indexOf(currentSlug.value);
+  return currentIndex !== -1 && currentIndex < galleryList.length - 1
+    ? galleryList[currentIndex + 1]
+    : null;
+});
+
+// キーボード
+const handleKeyDown = (event: KeyboardEvent) => {
+  if (event.key === 'ArrowLeft' && prevSlug.value) {
+    navigateTo(`/photo/${prevSlug.value}`);
+  }
+  else if (event.key === 'ArrowRight' && nextSlug.value) {
+    navigateTo(`/photo/${nextSlug.value}`);
+  }
+};
+
+// 監視状態の管理
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyDown);
+});
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeyDown);
 });
 
 const handleNavigate = async () => {
